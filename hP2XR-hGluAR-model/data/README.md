@@ -9,7 +9,7 @@ Each file is formatted for direct use in the model fitting and simulation script
 ## File Format
 
 All data files are plain text files (`.dat`), each containing two columns:
-- **Column 1:** Time (ms)
+- **Column 1:** Time (s or ms)
 - **Column 2:** Current (μA or nA for P2X; pA for GluA1—see individual file notes)
 
 Values are comma or tab-delimited as indicated per file.
