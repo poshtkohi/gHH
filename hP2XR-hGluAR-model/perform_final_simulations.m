@@ -1,3 +1,12 @@
+%--------------------------------------------------------------------------
+%   Copyright (c) 2024–2025 Alireza Poshtkohi. All rights reserved.
+%   Email: a.poshtkohi@herts.ac.uk
+%   Website: https://www.interdisciplinary.team
+%
+%   This file is part of the gHH model and is distributed under the
+%   GNU General Public License v3.0 (see LICENSE for details).
+%--------------------------------------------------------------------------
+
 %----- Functions ---------------------------------------%
 function perform_final_simulations()
     %----- Prepare the Environment -------------------------%
@@ -7,10 +16,10 @@ function perform_final_simulations()
     %receptor_name = "hp2x6";
     %receptor_name = "hp2x5";
     %receptor_name = "hp2x4";
-    %receptor_name = "hp2x3";
+    receptor_name = "hp2x3";
     %receptor_name = "hp2x2";
     %receptor_name = "hp2x1";
-    receptor_name = "hglua1";
+    %receptor_name = "hglua1";
     opt = model_fitting_configurations(receptor_name);
     opt_final = model_final_param_configurations(receptor_name);
     % Define the ATP concentrations to plot
@@ -76,13 +85,13 @@ function perform_final_simulations()
     opt.comparison = false;
     %}
     %--------------hglua1--------------%
-    %%{
+    %{
     %ATP_levels = [0.05; 0.1; 0.2; 0.5; 1; 2; 5; 10];%; 3; 5; 10;];
     ATP_levels = [10];
     t1 = 2; t2 = 30; t_max = 35;
     %t1 = 1; t2 = 6; t_max = 9;
     method = "linear";
-    %%}
+    %}
     
 
     %ATP_levels = [0.01; 0.02; 0.05; 0.1; 0.5; 1];

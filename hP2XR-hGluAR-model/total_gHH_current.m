@@ -1,3 +1,12 @@
+%--------------------------------------------------------------------------
+%   Copyright (c) 2024–2025 Alireza Poshtkohi. All rights reserved.
+%   Email: a.poshtkohi@herts.ac.uk
+%   Website: https://www.interdisciplinary.team
+%
+%   This file is part of the gHH model and is distributed under the
+%   GNU General Public License v3.0 (see LICENSE for details).
+%--------------------------------------------------------------------------
+
 %----- Functions ---------------------------------------%
 function i_m = total_gHH_current(m1, m2, h1, h2, h3, opt)
     n1 = opt.n1;

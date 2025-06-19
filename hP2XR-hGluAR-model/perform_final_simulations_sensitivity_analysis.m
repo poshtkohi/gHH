@@ -1,25 +1,34 @@
+%--------------------------------------------------------------------------
+%   Copyright (c) 2024–2025 Alireza Poshtkohi. All rights reserved.
+%   Email: a.poshtkohi@herts.ac.uk
+%   Website: https://www.interdisciplinary.team
+%
+%   This file is part of the gHH model and is distributed under the
+%   GNU General Public License v3.0 (see LICENSE for details).
+%--------------------------------------------------------------------------
+
 %----- Functions ---------------------------------------%
 function perform_final_simulations_sensitivity_analysis()
     %----- Prepare the Environment -------------------------%
     cleanup_environment();
     %----- Receptor Selection ------------------------------%
-    %receptor_name = "hp2x7";
+    receptor_name = "hp2x7";
     %receptor_name = "hp2x6";
     %receptor_name = "hp2x5";
     %receptor_name = "hp2x4";
     %receptor_name = "hp2x3";
     %receptor_name = "hp2x2";
     %receptor_name = "hp2x1";
-    receptor_name = "hglua1";
+    %receptor_name = "hglua1";
     opt = model_fitting_configurations(receptor_name);
     opt_final = model_final_param_configurations(receptor_name);
     %--------------hP2X1--------------%
-    %{
+    %%{
     ATP = 3;
     t1 = 2; t2 = 30; t_max = 35;
     %t1 = 1; t2 = 4; t_max = 6;
     method = "pchip";
-    %}
+    %%}
     %--------------hP2X2--------------%
     %{
     ATP = 3;
@@ -64,15 +73,16 @@ function perform_final_simulations_sensitivity_analysis()
     opt.comparison = false;
     %}
     %--------------hglua1--------------%
-    %%{
+    %{
     ATP = 10;
     t1 = 2; t2 = 30; t_max = 35;
     %t1 = 1; t2 = 6; t_max = 9;
     method = "linear";
-    %%}
+    %}
     
     %s = 1e-3; %dp = 0.1%
-    s = 1e-2; %dp = 1%
+    %s = 1e-2; %dp = 1%
+    s = 10e-2; %dp = 10%
 
     num_data_points = 1000;
     steps = 1;
@@ -227,6 +237,9 @@ function perform_final_simulations_sensitivity_analysis()
     ylabel('Relative sensitivity', 'FontSize', 14, 'FontWeight', 'bold', 'Color', [0.6, 0.4, 0.2]);
     %xlim([0 t_max]);
     %xlim([0 40]);
+    if receptor_name == "hglua1"
+        ylim([-0.4 0.8]);
+    end
     %plot(tint, simulated_current);
     %simulated_current
 end

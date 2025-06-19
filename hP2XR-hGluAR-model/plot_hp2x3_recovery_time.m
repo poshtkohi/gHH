@@ -1,9 +1,15 @@
+%--------------------------------------------------------------------------
+%   Copyright (c) 2024–2025 Alireza Poshtkohi. All rights reserved.
+%   Email: a.poshtkohi@herts.ac.uk
+%   Website: https://www.interdisciplinary.team
+%
+%   This file is part of the gHH model and is distributed under the
+%   GNU General Public License v3.0 (see LICENSE for details).
+%--------------------------------------------------------------------------
+
 %----- Functions ---------------------------------------%
 function plot_hp2x3_recovery_time()
     cleanup_environment();
-    % Define ATP concentrations (in μM) and corresponding recovery times (in s)
-    %ATP_conc =    [0.1, 0.3, 0.8, 1,   1.5,  2,  3,  5,  10, 30, 50, 80, 100];
-    %tau_recover = [10,  28,  64,  180, 88,   60, 55, 54, 27, 25, 18, 14, 13];
     
     ATP_conc =    [0.1, 0.3, 1,   1.5,   10,    30,  100];
     tau_recover = [15,  40,  300, 365,   480,   480, 480];
