@@ -8,11 +8,11 @@
 %--------------------------------------------------------------------------
 
 %----- Functions ---------------------------------------%
-function plot_hp2x3_recovery_time()
+function plot_hp2x2_recovery_time()
     cleanup_environment();
-    % Define ATP concentrations (in μM) and corresponding recovery times (in s)  
-    ATP_conc =    [0.1, 0.3, 1,   1.5,   10,    30,  100];
-    tau_recover = [15,  40,  300, 365,   480,   480, 480];
+    % Define ATP concentrations (in μM) and corresponding recovery times (in s)    
+    ATP_conc =    [1, 5,  10,   50,     100,  300;];
+    tau_recover = [7,  12,  20,   20,   30,   50];
 
     % Generate finer ATP concentration values for interpolation
     ATP_fine = logspace(log10(min(ATP_conc)), log10(max(ATP_conc)), 100);
