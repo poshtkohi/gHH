@@ -43,13 +43,13 @@ function perform_final_simulations()
     method = "pchip";
     %}
     %--------------hP2X3--------------%
-    %{
+    %%{
     ATP_levels = [0.1; 0.3; 1; 3; 10; 50; 80; 100];
     %ATP_levels = [0.9];
     t1 = 2; t2 = 30; t_max = 35;
     %t1 = 1; t2 = 3; t_max = 5;
     method = "linear";
-    %}
+    %%}
     %--------------hP2X4--------------%
     %{
     %ATP_levels = [0.5; 1; 3; 10; 30; 50; 100; 150; 300; 500;];
