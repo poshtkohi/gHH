@@ -39,7 +39,7 @@ The **gHH model** is a generalisation of the classic Hodgkin–Huxley framework,
    `main_gHH_fit.m`
 5. To simulate or visualise results using fitted parameters, run:  
    `perform_final_simulations.m`
-6. For details on data files, see the README in the `data` directory.
+6. For details on data files, see the README in the `hP2XR-hGluAR-model/data` directory.
 
 ---
 
