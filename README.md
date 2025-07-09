@@ -46,7 +46,7 @@ The **gHH model** is a generalisation of the classic Hodgkin–Huxley framework,
 ## Data Provenance
 
 - All datasets were extracted from published experimental studies, as referenced in our manuscript.
-- Extraction methods and file details are described in `data/README.md`.
+- Extraction methods and file details are described in `hP2XR-hGluAR-model/data/README.md`.
 
 ---
 
